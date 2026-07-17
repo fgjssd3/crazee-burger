@@ -11,16 +11,14 @@ const handleSubmit = (e) => {
     e.preventDefault()
      
    
-    if (nom.trim() === '') {
-        window.alert('Veuillez entrer votre prénom.');
-        
-        document.getElementById('zone').innerHTML ='please fill in this field';
-        return;
-      }
+   if (nom.trim() != '') {
+    alert(`Bonjour, ${nom}!`);
+     setNom('');
     
 
+   }
 
-    setNom('');
+   
 
 
 
@@ -41,9 +39,7 @@ const handleSubmit = (e) => {
 
        <form action="submit" onSubmit={handleSubmit}>
 
-        <input type="text" placeholder='Entrez votre prenom' onChange={(e) => setNom(e.target.value)} value={nom} />
-        <span id='zone'> </span>
-        
+         <input type="text" placeholder='Entrez votre prenom' onChange={(e) => setNom(e.target.value)} value={nom} required/>
          <button>Accedez a votre espace</button>
 
 
