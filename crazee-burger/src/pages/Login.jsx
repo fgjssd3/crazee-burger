@@ -34,7 +34,7 @@ const handleSubmit = (e) => {
     <div>   
        <h1>bienvenues chez nous !</h1>
 
-       <h2>connectez-vous !</h2> 
+       <h2>connectez-vous ! avec pull request</h2> 
        
 
        <form action="submit" onSubmit={handleSubmit}>
