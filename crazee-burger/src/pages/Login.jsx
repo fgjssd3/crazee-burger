@@ -1,9 +1,13 @@
 import { useState } from "react";
+import { Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
 
 function Login() {
 
     const [nom,setNom]= useState('');
+    const navigate = useNavigate();
 
 
 
@@ -12,23 +16,17 @@ const handleSubmit = (e) => {
      
    
    if (nom.trim() != '') {
-    alert(`Bonjour, ${nom}!`);
+   // alert(`Bonjour, ${nom}!`);
      setNom('');
+
+
+    navigate("/OrderPage", {state:{nom: nom}});
     
 
    }
 
-   
-
-
-
-   
-
 
 }
-
-
-
 
   return (
     <div>   
