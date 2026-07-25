@@ -8,6 +8,7 @@ function Login() {
 
     const [nom,setNom]= useState('');
     const navigate = useNavigate();
+  
 
 
 
@@ -20,7 +21,8 @@ const handleSubmit = (e) => {
      setNom('');
 
 
-    navigate("/OrderPage", {state:{nom: nom}});
+    navigate(`/OrderPage/${nom}`);
+  
     
 
    }

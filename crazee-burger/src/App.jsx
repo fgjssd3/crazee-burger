@@ -18,7 +18,7 @@ function App() {
         {/* 2. Utilisation du composant comme une balise JSX */}
 
         <Route path="/" element={<Login />} />
-        <Route path="/OrderPage" element={<OrderPage  />} />
+        <Route path="/OrderPage/:username" element={<OrderPage/>} />
         <Route path="*" element={<Introuvable />} />
 
 

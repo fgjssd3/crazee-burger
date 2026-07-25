@@ -1,9 +1,10 @@
-import {useNavigate,useLocation} from 'react-router-dom';
+import {useNavigate,useLocation, useParams} from 'react-router-dom';
 
 
 function OrderPage() {
 
-    const nom = useLocation().state.nom;
+    //const nom = useLocation().state.nom;
+    const {username}=useParams()
 
 
     const navigate = useNavigate();
@@ -17,7 +18,7 @@ function OrderPage() {
 
        <div>
          <h1>Bienvenue sur la page de commande !</h1>
-         <p>Bonjour, {nom}!</p>
+         <p>Bonjour, {username}!</p>
          <button    onClick={handleLogout}>Déconnexion</button>
        </div>
     )
