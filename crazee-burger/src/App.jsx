@@ -4,15 +4,27 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import Login from './pages/Login'
+import OrderPage from './pages/OrderPage'
+import Introuvable from './pages/Introuvable'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
 
 
   return (
-     <div>
-         <Login />
+      <BrowserRouter>
+      <Routes>
 
-     </div>
+        {/* 2. Utilisation du composant comme une balise JSX */}
+
+        <Route path="/" element={<Login />} />
+        <Route path="/OrderPage/:username" element={<OrderPage/>} />
+        <Route path="*" element={<Introuvable />} />
+
+
+      </Routes>
+      </BrowserRouter>
+
   )
 }
 
