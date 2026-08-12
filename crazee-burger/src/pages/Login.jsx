@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {useNavigate} from 'react-router-dom';
 
+import styled from 'styled-components';
+
+
+
 
 function Login() {
 
@@ -33,14 +37,11 @@ const handleSubmit = (e) => {
   return (
     <div>   
        <h1>bienvenues chez nous !</h1>
-
-       <h2>connectez-vous ! avec pull request</h2> 
-       
-
+           
        <form action="submit" onSubmit={handleSubmit}>
 
          <input type="text" placeholder='Entrez votre prenom' onChange={(e) => setNom(e.target.value)} value={nom} required/>
-         <button>Accedez a votre espace</button>
+         <button>Acceder a mon espace</button>
 
 
        </form>
@@ -50,3 +51,8 @@ const handleSubmit = (e) => {
 }
 
 export default Login
+
+
+
+
+
