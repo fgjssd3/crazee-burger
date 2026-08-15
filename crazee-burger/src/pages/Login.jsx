@@ -78,7 +78,7 @@ hr{
   border: 1.5px solid #f56a2c;
   margin-bottom:40px;
 }
-
+   
 h1{
   color:white;
   font-size:40px;
