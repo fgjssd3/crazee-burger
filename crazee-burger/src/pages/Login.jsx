@@ -35,18 +35,24 @@ const handleSubmit = (e) => {
 }
 
   return (
-    <div>   
+    <LoginFormStyled action="submit" onSubmit={handleSubmit}>   
+       
+       <div>
        <h1>bienvenues chez nous !</h1>
+
+       <hr />
            
-       <form action="submit" onSubmit={handleSubmit}>
+       <h2>Connectez vous</h2>      
+       </div>
+       
+        <input type="text" placeholder='Entrez votre prenom' onChange={(e) => setNom(e.target.value)} value={nom} required/>
+         
+       <button>Acceder a mon espace</button>
 
-         <input type="text" placeholder='Entrez votre prenom' onChange={(e) => setNom(e.target.value)} value={nom} required/>
-         <button>Acceder a mon espace</button>
 
+       
 
-       </form>
-
-    </div>
+    </LoginFormStyled>
   )
 }
 
@@ -55,4 +61,39 @@ export default Login
 
 
 
+const LoginFormStyled = styled.div`
 
+background: green;
+
+text-align: center;
+max-width: 500px;
+min-width: 400px;
+margin: 0px auto;
+padding:2.5rem 2rem;
+border-radius:5px;
+font-family: 'Amatic SC', cursive;
+
+
+hr{
+  border: 1.5px solid #f56a2c;
+  margin-bottom:40px;
+}
+
+h1{
+  color:white;
+  font-size:40px;
+}
+
+h2{
+  color:#8e8b8b;
+  margin:20px 10px 10px;
+  color:white;
+  font-size:36px;
+
+
+}
+
+
+ 
+  
+`;

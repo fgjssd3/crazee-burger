@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import OrderPage from './pages/OrderPage'
 import Introuvable from './pages/Introuvable'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import LoginPage from './pages/LoginPage'
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
 
         {/* 2. Utilisation du composant comme une balise JSX */}
 
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<LoginPage />} />
         <Route path="/OrderPage/:username" element={<OrderPage/>} />
         <Route path="*" element={<Introuvable />} />
 
